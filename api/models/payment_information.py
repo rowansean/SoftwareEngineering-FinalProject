@@ -9,7 +9,7 @@ class PaymentInformation(Base):
 
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     customer_id = Column(Integer, ForeignKey("customers.id"))
-    card_information = Column(String)
-    payment_type = Column(String)
+    card_information = Column(String(16))
+    payment_type = Column(String(10))
 
     customer = relationship("Customer", back_populates="payment_information")
