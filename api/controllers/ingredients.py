@@ -2,7 +2,7 @@
 from sqlalchemy.orm import Session
 from fastapi import HTTPException, status
 from ..models.ingredients import Ingredient
-from ..schemas.ingredient import IngredientCreate, IngredientRead, IngredientUpdate
+from ..schemas.ingredients import IngredientCreate, IngredientRead, IngredientUpdate
 from sqlalchemy.exc import SQLAlchemyError
 
 def create_ingredient(db: Session, ingredient_data: IngredientCreate) -> IngredientRead:
