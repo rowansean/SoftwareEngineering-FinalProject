@@ -1,5 +1,3 @@
-# routers/ingredient_router.py
-
 from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 from ..dependencies.database import get_db
