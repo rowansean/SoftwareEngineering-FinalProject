@@ -11,4 +11,4 @@ class Promotion(Base):
     promotion_code = Column(String(10), unique=True)
     expiration_date = Column(DATETIME)
 
-    promotion = relationship("Promotion", back_populates="payment_information")
+    payment_information = relationship("PaymentInformation", back_populates="promotion")

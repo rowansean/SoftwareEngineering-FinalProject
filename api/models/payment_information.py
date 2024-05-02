@@ -12,4 +12,5 @@ class PaymentInformation(Base):
     card_information = Column(String(16))
     payment_type = Column(String(10))
 
-    customer = relationship("Customer", back_populates="payment_information")
+    promotion_id = Column(Integer, ForeignKey('promotions.id'))
+    promotion = relationship("Promotion", back_populates="payment_information")
