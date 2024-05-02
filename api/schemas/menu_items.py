@@ -1,13 +1,13 @@
 from pydantic import BaseModel, Field
 
-class IngredientBase(BaseModel):
-    name: str = Field(..., example="Sugar")
-    amount: int = Field(..., example=100, description="Amount of the ingredient in grams")
+class MenuItemBase(BaseModel):
+    name: str = Field(..., example="Burger")
+    price: float = Field(..., example=9.99, description="Price of the menu item in USD")
 
-class IngredientCreate(IngredientBase):
+class MenuItemCreate(MenuItemBase):
     pass
 
-class IngredientRead(IngredientBase):
+class MenuItemRead(MenuItemBase):
     id: int
 
     class Config:

@@ -2,6 +2,7 @@ from datetime import datetime
 from typing import Optional
 from pydantic import BaseModel, validator
 
+
 class ReviewBase(BaseModel):
     note: str
     score: str  
@@ -20,7 +21,7 @@ class ReviewUpdate(BaseModel):
     note: Optional[str] = None
     score: Optional[str] = None
 
-class ReviewOut(ReviewBase):
+class Review(ReviewBase):
     id: int
     order_id: int
     created_at: datetime

@@ -14,3 +14,4 @@ class PaymentInformation(Base):
 
     promotion_id = Column(Integer, ForeignKey('promotions.id'))
     promotion = relationship("Promotion", back_populates="payment_information")
+    customer = relationship("Customer", back_populates="payment_information")

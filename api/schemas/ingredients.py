@@ -12,3 +12,7 @@ class IngredientRead(IngredientBase):
 
     class Config:
         orm_mode = True
+
+class IngredientUpdate(IngredientBase):
+    name: str = Field(None, example="Sugar", description="Name of the ingredient")
+    amount: int = Field(None, example=100, description="Amount of the ingredient in grams")
