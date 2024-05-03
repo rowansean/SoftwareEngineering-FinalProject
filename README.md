@@ -1,3 +1,7 @@
+Project Presentation:
+
+[![Video Placeholder](https://drive.google.com/file/d/1br274VLYHmwvHOHUbUjebUI8NrS5x-f3/view?t=18)
+
 ### Installing necessary packages:  
 * `pip install fastapi`
 * `pip install "uvicorn[standard]"`  
