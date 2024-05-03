@@ -7,7 +7,7 @@ from sqlalchemy.exc import SQLAlchemyError
 def create(db: Session, request):
     new_item = model.PaymentInformation(
         customer_id=request.customer_id,
-        customer_information=request.customer_infomation,
+        card_information = request.card_information,
         payment_type=request.payment_type
     )
 

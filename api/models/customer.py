@@ -13,6 +13,4 @@ class Customer(Base):
     address = Column(String(255), nullable=False)
 
     orders = relationship("Order", back_populates="customer")
-
-    def __repr__(self):
-        return f"<Customer(name={self.name}, email={self.email}, phone_number={self.phone_number}, address={self.address})>"
+    payment_information = relationship("PaymentInformation", back_populates="customer")

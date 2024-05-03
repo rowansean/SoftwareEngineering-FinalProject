@@ -2,6 +2,7 @@ from sqlalchemy import Column, ForeignKey, Integer, String, DECIMAL, DATETIME
 from sqlalchemy.orm import relationship
 from datetime import datetime
 from ..dependencies.database import Base
+from .association_table import association_table
 
 
 class MenuItem(Base):
@@ -13,4 +14,4 @@ class MenuItem(Base):
     calories = Column(Integer, nullable=False)
     category = Column(String(50), nullable=False)
 
-    ingredients = relationship("Ingredient", secondary="Ingredient", back_populates="menu_items")
+    ingredients = relationship("Ingredient", secondary="menu_item_ingredient", back_populates="menu_items")
