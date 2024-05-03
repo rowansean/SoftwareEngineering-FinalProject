@@ -1,6 +1,6 @@
 Project Presentation:
 
-[![Video Presentation](https://drive.google.com/file/d/1br274VLYHmwvHOHUbUjebUI8NrS5x-f3/view?usp=sharing)
+https://drive.google.com/file/d/1br274VLYHmwvHOHUbUjebUI8NrS5x-f3/view?usp=sharing
 
 ### Installing necessary packages:  
 * `pip install fastapi`
