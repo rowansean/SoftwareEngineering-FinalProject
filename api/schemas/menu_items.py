@@ -5,8 +5,7 @@ class MenuItemBase(BaseModel):
     price: float = Field(..., example=9.99, description="Price of the menu item in USD")
     calories: int = Field(..., example=500, description="Calories of the menu item")
     category: str = Field(..., example="Entree", description="Category of the menu item")
-
-
+      
 class MenuItemCreate(MenuItemBase):
     pass
 
