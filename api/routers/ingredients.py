@@ -4,7 +4,9 @@ from ..dependencies.database import get_db
 from ..controllers.ingredients import create_ingredient, get_ingredient, update_ingredient, delete_ingredient
 from ..schemas.ingredients import IngredientCreate, IngredientRead, IngredientUpdate
 
-router = APIRouter()
+router = APIRouter(
+    tags=["Ingredients"]
+)
 
 @router.post("/ingredients/", response_model=IngredientRead, status_code=status.HTTP_201_CREATED)
 def create_ingredient_route(ingredient: IngredientCreate, db: Session = Depends(get_db)):
